@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Page</title>
+</head>
+<body>
+    <h2>Admin Attendance Panel</h2>
+
+    <label>Student Name:</label>
+    <input type="text" id="name">
+    
+    <br><br>
+
+    <button onclick="mark('Present')">Present</button>
+    <button onclick="mark('Absent')">Absent</button>
+
+    <p id="result"></p>
+
+    <script>
+        function mark(status) {
+            let name = document.getElementById("name").value;
+
+            if (name == "") {
+                alert("Enter student name");
+            } else {
+                document.getElementById("result").innerHTML =
+                    name + " is marked " + status;
+            }
+        }
+    </script>
+
+    <br>
+    <a href="index.html">Home</a>
+</body>
+</html>
